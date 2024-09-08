@@ -1,0 +1,17 @@
+.pagination_container{
+    margin-top: 2rem;
+    border:2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.page_number{
+    border:2px solid white;
+    width:1.5rem;
+    height:1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
