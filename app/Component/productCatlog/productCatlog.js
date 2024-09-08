@@ -7,8 +7,9 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Pagination from "./pagination";
 import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 
-export default function ProductCatlog() {
+function ProductCatlogContent() {
     const itemsPerPage = 6;
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -111,5 +112,13 @@ export default function ProductCatlog() {
 
             <Pagination dataLength={dataLength} productType="hammers" />
         </div>
+    );
+}
+
+export default function ProductCatlog() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ProductCatlogContent />
+        </Suspense>
     );
 }
