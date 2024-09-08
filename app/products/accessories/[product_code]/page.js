@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function singleProductPage({ params }) {
     const { product_code } = params;
-    const imagePath = require(`../../../../assets/products/Hammer/${product_code}.jpg`);
+    const imagePath = `/assets/products/Hammer/${product_code}.jpg`
 
     return (
         <section className="flex flex-col justify-start pt-16 items-center border-2 border-red-500">
